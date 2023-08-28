@@ -12,6 +12,6 @@ form.use(express.static('public'));
 
 form.get('/', (req, res) => res.send('This was the first GET function you wrote'));
 
-form.get('/notes', (req, res) => res.send('public/notes.html'));
+form.get('/notes', (req, res) => path.join(__dirname, '/Develop/public/notes.html'));
 
 console.log("is this working?")
