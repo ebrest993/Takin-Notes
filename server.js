@@ -12,5 +12,6 @@ form.use(express.static('public'));
 
 form.get('/', (req, res) => res.send('This was the first GET function you wrote'));
 
-// form.get()
+form.get('/notes', (req, res) => res.send('public/notes.html'));
+
 console.log("is this working?")
