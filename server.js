@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-// const test = require('./db/db.json');
+const test = require('uuid');
 const fs = require('fs');
 const util = require('util');
 const readFromFile = util.promisify(fs.readFile);
@@ -39,6 +39,7 @@ app.post('/api/notes', (req, res) => {
             const parsedNotes = JSON.parse(notes);
             const { title, text } = req.body;
             console.info((`${title} and his friend ${text} means we've gotten this far`))
+            // include uuid to assign id's
             const finalNote = { title, text };
             parsedNotes.push(finalNote);
             writeToFile('db/db.json', JSON.stringify(parsedNotes))
@@ -48,7 +49,7 @@ app.post('/api/notes', (req, res) => {
         })
 });
 
-app.delete(`/api/notes`, (req, res) => {
+app.delete(`/api/notes/:id`, (req, res) => {
     res.send("DELETE Request Called")
     console.log("That's me")
     const deleteHandler = deleteFromFile('db/db.json', 'utf8')
@@ -72,3 +73,12 @@ app.get('*', (req, res) =>
 
 app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
 
+// Okay so I just went and cloned your repo
+// and I see that the first thing that I would change is that you need your line 51 of your server address to include :id  at the end of your route path
+// app.delete(/api/notes/:id`, (req, res) => {`
+// Like so
+// The next thing is when you are saving notes, all of your notes need to have a unique id  key
+// So on your line 42, const finalNote = { title, text };  try adding some type of method like uuid to generate a unique id for the note
+// Here is the docs for that https://www.npmjs.com/package/uuid
+// Once you have both of those lines added
+// the final step is in your delete route you can access the id of the button clicked using const id = req.params.id  and that will take the id of the note that the delete button is clicked from
