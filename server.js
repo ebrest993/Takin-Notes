@@ -9,11 +9,12 @@ const writeToFile = util.promisify(fs.writeFile);
 const dbName = ('./db/db.json');
 // const idLog = require('./public/assets/js/index.js');
 
-const PORT = 3001;
+const PORT = process.env.PORT||3001;
 
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
 
 app.get('/', (req, res) =>
