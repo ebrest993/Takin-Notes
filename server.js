@@ -5,7 +5,7 @@ const fs = require('fs');
 const util = require('util');
 const readFromFile = util.promisify(fs.readFile);
 const writeToFile = util.promisify(fs.writeFile);
-const deleteFromFile = util.promisify(fs.unlink);
+// const deleteFromFile = util.promisify(fs.unlink);
 const dbName = ('./db/db.json');
 // const idLog = require('./public/assets/js/index.js');
 
@@ -49,12 +49,12 @@ app.post('/api/notes', (req, res) => {
         })
 });
 
-app.delete(`/api/notes/:id`, (req, res) => {
-    res.send("DELETE Request Called")
-    console.log("That's me")
-    const deleteHandler = deleteFromFile('db/db.json', 'utf8')
-        .then((deleteHandler) => {
-            console.log(deleteHandler);
+// app.delete(`/api/notes/:id`, (req, res) => {
+//     res.send("DELETE Request Called")
+//     console.log("That's me")
+//     const deleteHandler = deleteFromFile('db/db.json', 'utf8')
+//         .then((deleteHandler) => {
+//             console.log(deleteHandler);
             // const removeNotes = JSON.parse(deleteHandler.id);
             // const { title, text } = req.body;
             // console.info((`And this means you got to the delete route`))
@@ -64,8 +64,8 @@ app.delete(`/api/notes/:id`, (req, res) => {
             //     .then((updatedNotes) => {
             //         res.json(updatedNotes); 
             //     })        
-        }) 
-});
+//         }) 
+// });
 
 app.get('*', (req, res) =>
     res.sendFile(path.join(__dirname, '/public/index.html'))
