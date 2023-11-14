@@ -22,3 +22,11 @@ Upon clicking the save button, the note is saved with the other saved notes.
 
 [Deployed Application Homepage](/Assets/images/NoteTakerScreenshot.png)
 
+[Viewing Saved Notes](/Assets/images/ViewingNotes.png)
+
+[Sample of New Note "Title Here"](/Assets/images/Sample_Note.png)
+
+[New Note "Title Here" Saved](/Assets/images/Saved_Sample_Note.png)
+
+
+
