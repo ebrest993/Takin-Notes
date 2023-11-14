@@ -1,32 +1,55 @@
 # NOTE TAKING APPLICATION
 
-This application provides a dynamic application allowing the user(s) to add new and/or edit current notes.
+## Table of Contents ##
+1. [Description](./README.md#description)
+2. [Usage](./README.md#usage)
+3. [Contributing](./README.md#contributing)
+4. [Contact](./README.md#contact)
 
-Upon launch, the user is presented with a title screen.
+## Description ##
+    
+This application provides a dynamic application allowing the user(s) to add, edit, or delete notes.
+    
+##############
 
-[Title Screen](/Assets/images/Home_Screen.png)
+## Usage ##
 
-When "Get Started" is clicked, the user is presented with a blank notes screen. On the left side is the list of current notes, in the middle is placeholder text "Note Title" and "Note Text".
+This application begins on the home page, giving you the option to start a new note.
 
-[Notes Page](/Assets/images/Notes_Page.png)
+![Deployed Application Homepage](/Assets/images/NoteTakerScreenshot.png)
 
-Upon typing, the body of the note wil be filled.
 
-[Sample Note](/Assets/images/Sample_Note.png)
+Upon clicking it, the user is redirected to the page with all the previously saved notes.
 
-Upon clicking the save button, the note is saved with the other saved notes.
+![Viewing Saved Notes](/Assets/images/ViewingNotes.png)
 
-[Saved Sample Note](/Assets/images/Saved_Sample_Note.png)
+The user can choose to delete any of these notes, edit them, or save a new note.
+
+![Sample of New Note "Title Here"](/Assets/images/Sample_Note.png)
+
+![New Note "Title Here" Saved](/Assets/images/Saved_Sample_Note.png)
+
+#############
+
+## Contributing ##
+
+If developers wish to request access for contribution, the repository can be found at this link:
+
+GitHub repository: [ebrest993](https://github.com/ebrest993/Takin-Notes)
+
+##############
+
+## Contact ##
+
+For any questions or to contact the developer directly:
+
+email: elliott.brest@gmail.com
 
 [Heroku Link](https://note-taker-faker-87dbbf5463e0.herokuapp.com/)
 
-[Deployed Application Homepage](/Assets/images/NoteTakerScreenshot.png)
 
-[Viewing Saved Notes](/Assets/images/ViewingNotes.png)
 
-[Sample of New Note "Title Here"](/Assets/images/Sample_Note.png)
 
-[New Note "Title Here" Saved](/Assets/images/Saved_Sample_Note.png)
 
 
 
